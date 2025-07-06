@@ -108,4 +108,10 @@ def get_trending_videos():
 if __name__ == '__main__':
     # Para rodar localmente, o Flask por padrão roda na porta 5000
     # Certifique-se de que esta porta não está sendo usada por outro programa
-    app.run(debug=True, port=5000)
+    import os
+
+# ... (seu código Flask anterior) ...
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000)) # Pega a porta do ambiente ou usa 5000 como padrão
+    app.run(host="0.0.0.0", port=port, debug=False) # Configura para escutar em 0.0.0.0 e na porta
