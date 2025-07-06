@@ -1,6 +1,7 @@
 ﻿from flask import Flask, jsonify, request  
 from googleapiclient.discovery import build
 from flask_cors import CORS # Importe CORS para permitir requisições do seu frontend
+import os
 
 app = Flask(__name__)
 CORS(app) # Habilita CORS para todas as rotas, permitindo que seu frontend no Vercel acesse
