@@ -1,4 +1,4 @@
-﻿from flask import Flask, jsonify, request
+﻿from flask import Flask, jsonify, request  
 from googleapiclient.discovery import build
 from flask_cors import CORS # Importe CORS para permitir requisições do seu frontend
 
